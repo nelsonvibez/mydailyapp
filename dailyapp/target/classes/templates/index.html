@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Motivation</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Daily Inspiration</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/quotes">Quotes</a></li>
+            <li><a href="/images">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="quote-section">
+            <h1>Today's Quote</h1>
+            <div class="quote-container">
+                <p class="quote-text" th:text="${dailyQuote.text}"></p>
+                <p class="quote-author" th:text="${dailyQuote.author}"></p>
+            </div>
+        </section>
+
+        <section class="motivation-image">
+            <h2>Inspirational Image</h2>
+            <img th:src="${dailyImage.url}" alt="Motivational Image">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Daily Motivation. All rights reserved.</p>
+    </footer>
+</body>
+</html> 

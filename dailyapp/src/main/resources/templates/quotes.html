@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes Collection</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Daily Inspiration</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/quotes">Quotes</a></li>
+            <li><a href="/images">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h1>Inspirational Quotes</h1>
+        <div class="quotes-grid">
+            <div class="quote-card" th:each="quote : ${quotes}">
+                <p class="quote-text" th:text="${quote.text}"></p>
+                <p class="quote-author" th:text="${quote.author}"></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Daily Motivation. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
